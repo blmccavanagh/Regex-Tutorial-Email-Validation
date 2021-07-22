@@ -38,7 +38,7 @@ A more comprehensive and specific example is:
 ---
 
 ### Anchors: `^` `&` `$`
-
+<br>
 Anchors are used in several instances - to match a position before, after, or between characters. For example if you tried to match ^S to Start you would get a match, as the string starts with "S". If you were to try and apply ^A to Start, you would not get a match, as the string does not begin with "S".
 While ^ can be used to match the start of a string, $ can be used to match the end of a string.
 
@@ -56,7 +56,7 @@ An email doesn't begin or end with any specific character, so we do not need anc
 ---
 
 ### Quantifiers: `*` `+` `?` and `{}`
-
+<br>
 Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found. [3]
 
 `*` Match zero or more times.
@@ -77,21 +77,23 @@ Quantifiers specify how many instances of a character, group, or character class
 
 This means:
 <br>
-__one or more of any character__
-<br>
-`+`
-<br>
-__an `@` symbol__
-<br>
-`+`
+`\S` `+`
 <br>
 __one or more of any character__
 <br>
-`+`
+`@` `+`
 <br>
-__a `.` symbol__
+__Match an "@" symbol.__
 <br>
-`+`
+`\S` `+`
+<br>
+__ Match one or more of any character.__
+<br>
+`\. +`
+<br>
+__Match an "." symbol.__
+<br>
+`\S`
 <br>
 __one or more of any character__
 
@@ -102,14 +104,17 @@ __one or more of any character__
 This means:
 <br>
 <br>
-```[a-z0-9!#$%&'*+/=?^_`{|}~-]``` `+`
+```[a-z0-9!#$%&'*+/=?^_`{|}~-]```
+<br>`+`
 <br>
-Match one or more of the proceeding characters.
+Match one or more of the preceding characters.
 <br>
 <br>
-```(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)``` `*`
+```(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)```
 <br>
-Match zero or more of the proceeding characters.
+`*`
+<br>
+Match zero or more of the preceding characters.
 <br>
 <br>
 `@`
@@ -117,14 +122,18 @@ Match zero or more of the proceeding characters.
 An __"@"__ symbol.
 <br>
 <br>
-```(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)``` `+`
+```(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)```
 <br>
-Match one or more times.
+`+`
+<br>
+Match one or more of the preceding characters.
 <br>
 <br>
-```[a-z0-9](?:[a-z0-9-]*[a-z0-9])``` `?`
+```[a-z0-9](?:[a-z0-9-]*[a-z0-9])```
 <br>
-Match zero or one time.
+`?`
+<br>
+Match zero or one of the preceding characters.
 
 ---
 
