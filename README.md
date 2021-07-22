@@ -89,7 +89,7 @@ __one or more of any character__
 <br>
 `+`
 <br>
-`__.__`
+`.`
 <br>
 `+`
 <br>
