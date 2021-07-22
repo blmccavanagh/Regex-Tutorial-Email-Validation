@@ -2,15 +2,11 @@
 
 ## This GitHub repository contains a tutorial explaining the use of regular expressions in coding.
 
----
-
 ## Summary
 
 A regular expression, typically referred to as RegEx or RegExp, is a sequence of characters that specifies a search pattern. Usually such patterns are used by string-searching algorithms for "find" or "find and replace" operations on strings, or for input validation. It is a technique developed in theoretical computer science and formal language theory. [1]
 
 This tutorial will show you how to build a RegEx that checks wether an email address is valid or not.
-
----
 
 ## Example
 
@@ -39,11 +35,9 @@ A more comprehensive and specific example is:
 
 ## Regex Components
 
----
-
 ### Anchors: `^` `&` `$`
 
-Anchors are used in several instances - to match a position before, after, or between characters. For example if you tried to match ^S to Start you would get a match, as the string starts with "S". If you were to try and apply ^A to Start, you would not get a match, as the string does not begin with "S". [2]
+Anchors are used in several instances - to match a position before, after, or between characters. For example if you tried to match ^S to Start you would get a match, as the string starts with "S". If you were to try and apply ^A to Start, you would not get a match, as the string does not begin with "S".
 While ^ can be used to match the start of a string, $ can be used to match the end of a string.
 
 `^Start` matches any string that starts with `Start`.
@@ -55,11 +49,9 @@ While ^ can be used to match the start of a string, $ can be used to match the e
 `information` matches any string that has the text `information` in it.
 <br>
 <br>
-An email doesn't begin or end with any specific character, so we do not need anchors in this example.
+An email doesn't begin or end with any specific character, so we do not need anchors in this example. [2]
 
----
-
-### Quantifiers
+### Quantifiers: `+` `?` and `{}`
 
 ---
 
@@ -82,4 +74,5 @@ This article is written by me, Bridget Louise McCavanagh, a Full Stack Web Devel
 ### References
 
 [1] https://en.wikipedia.org/wiki/Regular_expression
+<br>
 [2] https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285
