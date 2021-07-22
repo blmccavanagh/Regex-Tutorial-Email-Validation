@@ -79,19 +79,19 @@ This means:
 <br>
 __one or more of any character__
 <br>
-+
+`+`
 <br>
 __an @ symbol__
 <br>
-+
+`+`
 <br>
 __one or more of any character__
 <br>
-+
+`+`
 <br>
-__.__
+`__.__`
 <br>
-+
+`+`
 <br>
 __one or more of any character__
 
