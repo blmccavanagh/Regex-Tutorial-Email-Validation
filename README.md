@@ -141,6 +141,23 @@ Match zero or one of the preceding characters.
 
 ### Grouping Constructs
 
+A capturing group is defined when the objects of that group are placed inside parenthesis "( )". It allows mini patterns to be created within our larger patterns. For example, if you were trying to find all instances of "the" or "The" in a string you could use a *grouping constructor*.
+<br>
+The expression would look like this `/(t|T)he/g`.
+<br>
+Because it is its own group, you can also apply individual quantifiers to that group such as `/(t|T){2,3}he/`
+
+This operator is very useful when we need to extract information from strings or data using your preferred programming language. Any multiple occurrences captured by several groups will be exposed in the form of a classical array: we will access their values specifying using an index on the result of the match. [2]
+
+*Let's look at the comprehensive example:*
+<br>
+<br>
+`(?:` 
+<br>
+This indicates a *non-capturing group*. It groups multiple tokens together without creating a capture group.
+
+---
+
 ### Bracket Expressions
 
 ### Character Classes
