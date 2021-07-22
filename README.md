@@ -79,7 +79,7 @@ This means:
 <br>
 `\S` `+`
 <br>
-__one or more of any character__
+__Match one or more of any character__
 <br>
 `@` `+`
 <br>
@@ -87,7 +87,7 @@ __Match an "@" symbol.__
 <br>
 `\S` `+`
 <br>
-__ Match one or more of any character.__
+__Match one or more of any character.__
 <br>
 `\.` `+`
 <br>
@@ -95,7 +95,7 @@ __Match an "." symbol.__
 <br>
 `\S`
 <br>
-__one or more of any character__
+__Match one or more of any character__
 
 *Now lets look at the comprehensive example:*
 
