@@ -71,7 +71,7 @@ Quantifiers specify how many instances of a character, group, or character class
 
 `{ x , y }` Match from n to m times.
 
-Let's look at our simple example:
+*Let's look at our simple example:*
 
 `/\S+@\S+\.\S+/`
 
@@ -95,7 +95,7 @@ __.__
 <br>
 __one or more of any character__
 
-Now lets look at the comprehensive example:
+*Now lets look at the comprehensive example:*
 
 ```/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g```
 
