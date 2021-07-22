@@ -39,9 +39,29 @@ A more comprehensive and specific example is:
 
 ## Regex Components
 
-### Anchors
+---
+
+### Anchors: `^` `&` `$`
+
+Anchors are used in several instances - to match a position before, after, or between characters. For example if you tried to match ^S to Start you would get a match, as the string starts with "S". If you were to try and apply ^A to Start, you would not get a match, as the string does not begin with "S". [2]
+While ^ can be used to match the start of a string, $ can be used to match the end of a string.
+
+`^Start` matches any string that starts with `Start`.
+
+`^End` matches any string that starts with `End`.
+
+`^Start End$` matches only the string `Start End`.
+
+`information` matches any string that has the text `information` in it.
+<br>
+<br>
+An email doesn't begin or end with any specific character, so we do not need anchors in this example.
+
+---
 
 ### Quantifiers
+
+---
 
 ### Grouping Constructs
 
@@ -62,3 +82,4 @@ This article is written by me, Bridget Louise McCavanagh, a Full Stack Web Devel
 ### References
 
 [1] https://en.wikipedia.org/wiki/Regular_expression
+[2] https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285
