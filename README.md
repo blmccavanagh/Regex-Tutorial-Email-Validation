@@ -1,10 +1,28 @@
-# Regex Tutorial - Email Validation
+# RegEx Tutorial - Email Validation
 
-Introductory paragraph (replace this with your text)
+## This GitHub repository contains a tutorial explaining the use of regular expressions in coding.
+
+---
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+A regular expression, typically referred to as RegEx or RegExp, is a sequence of characters that specifies a search pattern. Usually such patterns are used by string-searching algorithms for "find" or "find and replace" operations on strings, or for input validation. It is a technique developed in theoretical computer science and formal language theory. [1]
+
+This tutorial will show you how to build a RegEx that checks wether an email address is valid or not.
+
+---
+
+## Example
+
+A simple example of a RegEx to validate an email input is:
+
+```/\S+@\S+\.\S+/```
+
+A more comprehensive and specific example is:
+
+```/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g```
+
+---
 
 ## Table of Contents
 
@@ -16,6 +34,8 @@ Briefly summarize the regex you will be describing and what you will explain. In
 - [The OR Operator](#the-or-operator)
 - [Flags](#flags)
 - [Character Escapes](#character-escapes)
+
+---
 
 ## Regex Components
 
@@ -37,4 +57,8 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+This article is written by me, Bridget Louise McCavanagh, a Full Stack Web Developer.
+
+### References
+
+[1] https://en.wikipedia.org/wiki/Regular_expression
