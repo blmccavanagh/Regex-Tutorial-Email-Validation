@@ -58,6 +58,8 @@ An email doesn't begin or end with any specific character, so we do not need anc
 ### Quantifiers: `*` `+` `?` and `{}`
 <br>
 Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found. [3]
+<br>
+<br>
 
 `*` Match zero or more times.
 
