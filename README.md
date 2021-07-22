@@ -12,7 +12,7 @@ This tutorial will show you how to build a RegEx that checks wether an email add
 
 A simple example of a RegEx to validate an email input is:
 
-```/\S+@\S+\.\S+/```
+`/\S+@\S+\.\S+/`
 
 A more comprehensive and specific example is:
 
@@ -55,7 +55,76 @@ An email doesn't begin or end with any specific character, so we do not need anc
 
 ---
 
-### Quantifiers: `+` `?` and `{}`
+### Quantifiers: `*` `+` `?` and `{}`
+
+Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found. [3]
+
+`*` Match zero or more times.
+
+`+` Match one or more times.
+
+`?` Match zero or one time.
+
+`{ x }` Match exactly n times.
+
+`{ x ,}` Match at least n times.
+
+`{ x , y }` Match from n to m times.
+
+Let's look at our simple example:
+
+`/\S+@\S+\.\S+/`
+
+This means:
+<br>
+__one or more of any character__
+<br>
++
+<br>
+__an @ symbol__
+<br>
++
+<br>
+__one or more of any character__
+<br>
++
+<br>
+__.__
+<br>
++
+<br>
+__one or more of any character__
+
+Now lets look at the comprehensive example:
+
+```/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g```
+
+This means:
+<br>
+<br>
+```[a-z0-9!#$%&'*+/=?^_`{|}~-]``` `+`
+<br>
+Match one or more of the proceeding characters.
+<br>
+<br>
+```(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)``` `*`
+<br>
+Match zero or more of the proceeding characters.
+<br>
+<br>
+`@`
+<br>
+An __"@"__ symbol.
+<br>
+<br>
+```(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)``` `+`
+<br>
+Match one or more times.
+<br>
+<br>
+```[a-z0-9](?:[a-z0-9-]*[a-z0-9])``` `?`
+<br>
+Match zero or one time.
 
 ---
 
@@ -80,3 +149,5 @@ This article is written by me, Bridget Louise McCavanagh, a Full Stack Web Devel
 [1] https://en.wikipedia.org/wiki/Regular_expression
 <br>
 [2] https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285
+<br>
+[3] https://docs.microsoft.com/en-us/dotnet/standard/base-types/quantifiers-in-regular-expressions
