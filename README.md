@@ -89,7 +89,7 @@ __Match an "@" symbol.__
 <br>
 __ Match one or more of any character.__
 <br>
-`\. +`
+`\.` `+`
 <br>
 __Match an "." symbol.__
 <br>
