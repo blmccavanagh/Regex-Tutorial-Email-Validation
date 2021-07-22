@@ -81,7 +81,7 @@ __one or more of any character__
 <br>
 `+`
 <br>
-__an @ symbol__
+__an `@` symbol__
 <br>
 `+`
 <br>
@@ -89,7 +89,7 @@ __one or more of any character__
 <br>
 `+`
 <br>
-`.`
+__a `.` symbol__
 <br>
 `+`
 <br>
