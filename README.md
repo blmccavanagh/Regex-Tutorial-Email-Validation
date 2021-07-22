@@ -35,6 +35,8 @@ A more comprehensive and specific example is:
 
 ## Regex Components
 
+---
+
 ### Anchors: `^` `&` `$`
 
 Anchors are used in several instances - to match a position before, after, or between characters. For example if you tried to match ^S to Start you would get a match, as the string starts with "S". If you were to try and apply ^A to Start, you would not get a match, as the string does not begin with "S".
@@ -50,6 +52,8 @@ While ^ can be used to match the start of a string, $ can be used to match the e
 <br>
 <br>
 An email doesn't begin or end with any specific character, so we do not need anchors in this example. [2]
+
+---
 
 ### Quantifiers: `+` `?` and `{}`
 
