@@ -34,10 +34,9 @@ A more comprehensive and specific example is:
 ---
 
 ## Regex Components
-<br>
 
 ### Anchors: `^` `&` `$`
-<br>
+
 Anchors are used in several instances - to match a position before, after, or between characters. For example if you tried to match ^S to Start you would get a match, as the string starts with "S". If you were to try and apply ^A to Start, you would not get a match, as the string does not begin with "S".
 While ^ can be used to match the start of a string, $ can be used to match the end of a string.
 
@@ -55,9 +54,8 @@ An email doesn't begin or end with any specific character, so we do not need anc
 ---
 
 ### Quantifiers: `*` `+` `?` and `{}`
-<br>
+
 Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found. [3]
-<br>
 <br>
 
 `*` Match zero or more times.
@@ -203,7 +201,7 @@ Some common examples are:
 
 ### The OR Operator
 
-In RegEx `OR` is represented by a single vertical bar `|`.
+In RegEx `OR` is represented by a single vertical bar `|`. It enables as to match a collection of text against two different test patterns, if either returns true it becomes a match.
 
 We do not use the `OR` operator in either of our email examples, but here is a quick summary of how it works. [6]
 
