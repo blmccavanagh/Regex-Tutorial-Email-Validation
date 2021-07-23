@@ -158,7 +158,23 @@ This indicates a *non-capturing group*. It groups multiple tokens together witho
 
 ---
 
-### Bracket Expressions
+### Bracket Expressions: `[ ]`
+
+A bracket expression is either a matching list expression or a non-matching list expression. It consists of one or more expressions: ordinary characters, collating elements, collating symbols, equivalence classes, character classes, or range expressions. [4]
+
+In our example, bracket expressions are used to represent character sets.
+
+`[`
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`a-z` : matches a character in the range of a to z (char codes 97 through 122) and is case sensitive.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`0-9` : matches a character in the range of 0 to 9 (char codes 48 through 57) and is case sensitive.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`!` `#` `$` `%` `&` `'` `*` `+` `/` `=` `?` `^` `_` ``` ` ``` `{` `|` `}` `~` `-` : matches any of the characters specified (char codes 33, 35-39, 42-43, 47, 61, 63, 94-96, 123-126, 45 respectively).
+<br>
+`]`
+
+---
 
 ### Character Classes
 
@@ -179,3 +195,5 @@ This article is written by me, Bridget Louise McCavanagh, a Full Stack Web Devel
 [2] https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285
 <br>
 [3] https://docs.microsoft.com/en-us/dotnet/standard/base-types/quantifiers-in-regular-expressions
+<br>
+[4] https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap09.html#:~:text=A%20bracket%20expression%20is%20either,character%20classes%2C%20or%20range%20expressions.
