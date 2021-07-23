@@ -34,8 +34,7 @@ A more comprehensive and specific example is:
 ---
 
 ## Regex Components
-
----
+<br>
 
 ### Anchors: `^` `&` `$`
 <br>
@@ -81,23 +80,27 @@ This means:
 <br>
 `\S` `+`
 <br>
-__Match one or more of any character__
+Match *one or more* of __any__ character.
 <br>
-`@` `+`
+
+`@`
 <br>
-__Match an "@" symbol.__
+__Must__ match an __"@"__ symbol.
 <br>
+
 `\S` `+`
 <br>
-__Match one or more of any character.__
+Match *one or more* of __any__ character.
 <br>
+
 `\.` `+`
 <br>
-__Match an "." symbol.__
+__Must__ match an __"."__ symbol.
 <br>
+
 `\S`
 <br>
-__Match one or more of any character__
+Match *one or more* of __any__ character.
 
 *Now lets look at the comprehensive example:*
 
@@ -106,36 +109,29 @@ __Match one or more of any character__
 This means:
 <br>
 <br>
-```[a-z0-9!#$%&'*+/=?^_`{|}~-]```
-<br>`+`
+```[a-z0-9!#$%&'*+/=?^_`{|}~-]``` `+`
 <br>
-Match one or more of the preceding characters.
+Match *one or more* of any the preceding characters within the defined character sets.
 <br>
 <br>
-```(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)```
+```(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)``` `*`
 <br>
-`*`
-<br>
-Match zero or more of the preceding characters.
+Match *zero or more* of the preceding characters within the defined character sets.
 <br>
 <br>
 `@`
 <br>
-An __"@"__ symbol.
+*Must* match an __"@"__ symbol.
 <br>
 <br>
-```(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)```
+```(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)``` `+`
 <br>
-`+`
-<br>
-Match one or more of the preceding characters.
+Match *one or more* of the preceding characters within the defined character sets.
 <br>
 <br>
-```[a-z0-9](?:[a-z0-9-]*[a-z0-9])```
+```[a-z0-9](?:[a-z0-9-]*[a-z0-9])``` `?`
 <br>
-`?`
-<br>
-Match zero or one of the preceding characters.
+Match *zero or one* of the preceding characters within the defined character sets.
 
 ---
 
@@ -149,9 +145,13 @@ Because it is its own group, you can also apply individual quantifiers to that g
 
 This operator is very useful when we need to extract information from strings or data using your preferred programming language. Any multiple occurrences captured by several groups will be exposed in the form of a classical array: we will access their values specifying using an index on the result of the match. [2]
 
-*Let's look at the comprehensive example:*
+*Let's look at a snippet from our comprehensive example:*
 <br>
+
+```(?:[a-z0-9-]*[a-z0-9])```
 <br>
+
+At the beginning of this portion of our RegEx we see:
 `(?:` 
 <br>
 This indicates a *non-capturing group*. It groups multiple tokens together without creating a capture group.
