@@ -178,6 +178,29 @@ In our example, bracket expressions are used to represent character sets.
 
 ### Character Classes
 
+Character classes are a shorthand way to represent a group of characters.
+In our simple email RegEx we are using this with the `\S`. This represents a single character that *is not* white space. Character classes always start with a single backslash `\` which escapes the literal meaning of that character.
+
+Some common examples are:
+
+- `\s`: single whitespace character
+- `\S`: single character that is NOT white space
+- `\u`: single uppercase character `[A-Z]`
+- `\U`: single character that is not uppercase `[^A-Z]`
+- `\w`: word character `[a-zA-Z0-9_]`
+- `\W`: single character that is NOT a word character `[^a-zA-Z0-9_]`
+- `\x00-\xFF`: hexadecimal character
+- `\cX`: ASCII control character
+- `\d`: single digit `[0-9]`
+- `\D`: single character that is NOT a digit `[^0-9]`
+- `\E`: stop processing escaped characters
+- `\l`: match a single lowercase letter `[a-z]`
+- `\L`: single character that is not lowercase `[^a-z]`
+
+[5]
+
+---
+
 ### The OR Operator
 
 ### Flags
@@ -197,3 +220,5 @@ This article is written by me, Bridget Louise McCavanagh, a Full Stack Web Devel
 [3] https://docs.microsoft.com/en-us/dotnet/standard/base-types/quantifiers-in-regular-expressions
 <br>
 [4] https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap09.html#:~:text=A%20bracket%20expression%20is%20either,character%20classes%2C%20or%20range%20expressions.
+<br>
+[5] https://javascript.info/regexp-character-classes
