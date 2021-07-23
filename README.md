@@ -203,6 +203,23 @@ Some common examples are:
 
 ### The OR Operator
 
+In RegEx `OR` is represented by a single vertical bar `|`.
+
+We do not use the `OR` operator in either of our email examples, but here is a quick summary of how it works. [6]
+
+```^I like (dogs|penguins), but not (lions|tigers).$```
+
+This expression will match any of the following strings:
+
+```
+I like dogs, but not lions.
+I like dogs, but not tigers.
+I like penguins, but not lions.
+I like penguins, but not tigers.
+```
+
+---
+
 ### Flags
 
 ### Character Escapes
@@ -222,3 +239,5 @@ This article is written by me, Bridget Louise McCavanagh, a Full Stack Web Devel
 [4] https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap09.html#:~:text=A%20bracket%20expression%20is%20either,character%20classes%2C%20or%20range%20expressions.
 <br>
 [5] https://javascript.info/regexp-character-classes
+<br>
+[6] https://www.ocpsoft.org/tutorials/regular-expressions/or-in-regex/
