@@ -181,19 +181,19 @@ In our simple email RegEx we are using this with the `\S`. This represents a sin
 
 Some common examples are:
 
-- `\s`: single whitespace character
-- `\S`: single character that is NOT white space
-- `\u`: single uppercase character `[A-Z]`
-- `\U`: single character that is not uppercase `[^A-Z]`
-- `\w`: word character `[a-zA-Z0-9_]`
-- `\W`: single character that is NOT a word character `[^a-zA-Z0-9_]`
-- `\x00-\xFF`: hexadecimal character
-- `\cX`: ASCII control character
-- `\d`: single digit `[0-9]`
-- `\D`: single character that is NOT a digit `[^0-9]`
-- `\E`: stop processing escaped characters
-- `\l`: match a single lowercase letter `[a-z]`
-- `\L`: single character that is not lowercase `[^a-z]`
+- `\s` : single whitespace character
+- `\S` : single character that is NOT white space
+- `\u` : single uppercase character `[A-Z]`
+- `\U` : single character that is not uppercase `[^A-Z]`
+- `\w` : word character `[a-zA-Z0-9_]`
+- `\W` : single character that is NOT a word character `[^a-zA-Z0-9_]`
+- `\x00-\xFF` : hexadecimal character
+- `\cX` : ASCII control character
+- `\d` : single digit `[0-9]`
+- `\D` : single character that is NOT a digit `[^0-9]`
+- `\E` : stop processing escaped characters
+- `\l` : match a single lowercase letter `[a-z]`
+- `\L` : single character that is not lowercase `[^a-z]`
 
 [5]
 
@@ -239,16 +239,25 @@ and so on.
 
 Some common examples are:
 
-- `i`: Ignore Casing - makes the expression search case-insensitively 
-- `g`: Global - makes the expression search for all occurences
-- `s`: Dot All - makes the wild character `.` match new lines as well
-- `m`: Multiline - makes the boundary characters `^` and `$` match the beginning and ending of every single line instead of the beginning and ending of the whole string
-- `y`: Sticky - makes the expression start its searching from the index indicated in its `lastIndex` property
-- `u`: Unicode - makes the expression assume individual characters as *code points*, not *code units*, and thus match 32-bit characters as well
+- `i` : Ignore Casing - makes the expression search case-insensitively 
+- `g` : Global - makes the expression search for all occurences
+- `s` : Dot All - makes the wild character `.` match new lines as well
+- `m` : Multiline - makes the boundary characters `^` and `$` match the beginning and ending of every single line instead of the beginning and ending of the whole string
+- `y` : Sticky - makes the expression start its searching from the index indicated in its `lastIndex` property
+- `u` : Unicode - makes the expression assume individual characters as *code points*, not *code units*, and thus match 32-bit characters as well
 
 ---
 
 ### Character Escapes
+
+The backslash in a regular expression precedes a literal character. You also escape certain letters that represent common character classes, such as `\w` for a word character or `\s` for a space. [8]
+
+Our example doesn't call for the use of character escapes, but here is a quick summary of how it works.
+
+- `\\` : Represents a single backslash character
+- `\+` : Represents a single "+" character
+- `\A` : Represents the start of a string
+- `\d` : represents a single digit `[0-9]`
 
 ---
 
@@ -287,3 +296,5 @@ If you have any questions, check out my <a href="https://www.github.com/blmccava
 [6] https://www.ocpsoft.org/tutorials/regular-expressions/or-in-regex/
 <br>
 [7] https://www.codeguage.com/courses/regexp/flags
+<br>
+[8] https://www.jmp.com/support/help/en/16.0/index.shtml#page/jmp/escaped-characters-in-regular-expressions.shtml
