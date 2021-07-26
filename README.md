@@ -220,11 +220,57 @@ I like penguins, but not tigers.
 
 ### Flags
 
+Flags, in a regular expression, are tokens that modify its behavior of searching. Flags are optional parameters that we can add to a plain expression to make it search in a different way. Each flag is denoted by a single alphabetic character, and serves different purposes in modifying the expression's searching behaviour. [7]
+
+We do not use any flags in either of our email examples, but here is a quick summary of how it works.
+
+```/Hello/i```
+
+This expression will match any of the following strings:
+
+```
+hello
+HELLO
+HeLlo
+helLO
+```
+
+and so on.
+
+Some common examples are:
+
+- `i`: Ignore Casing - makes the expression search case-insensitively 
+- `g`: Global - makes the expression search for all occurences
+- `s`: Dot All - makes the wild character `.` match new lines as well
+- `m`: Multiline - makes the boundary characters `^` and `$` match the beginning and ending of every single line instead of the beginning and ending of the whole string
+- `y`: Sticky - makes the expression start its searching from the index indicated in its `lastIndex` property
+- `u`: Unicode - makes the expression assume individual characters as *code points*, not *code units*, and thus match 32-bit characters as well
+
+---
+
 ### Character Escapes
+
+---
 
 ## Author
 
 This article is written by me, Bridget Louise McCavanagh, a Full Stack Web Developer.
+
+---
+
+## Questions
+
+If you have any questions, check out my <a href="https://www.github.com/blmccavanagh">GitHub</a> or email me <a href="mailto:blmccavanagh@gmail.com">here</a>.
+
+---
+
+<div align="center">
+
+**Thank you for visiting.**
+
+</div>
+
+---
 
 ### References
 
@@ -239,3 +285,5 @@ This article is written by me, Bridget Louise McCavanagh, a Full Stack Web Devel
 [5] https://javascript.info/regexp-character-classes
 <br>
 [6] https://www.ocpsoft.org/tutorials/regular-expressions/or-in-regex/
+<br>
+[7] https://www.codeguage.com/courses/regexp/flags
